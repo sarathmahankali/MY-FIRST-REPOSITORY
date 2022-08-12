@@ -1,0 +1,23 @@
+
+<div class="split1">
+    <div class="centered">
+        <div class="col-md-4 col-12" style=" margin-top: 2em">
+            <img src="{{vets.vet_profile_image}}" />
+            <div class="col-md-12 col-6 buttons">
+                <br>
+                <label type="button" class="btn bt-sm" id="userDeleteIcon" (click)='removevetProfile()'>
+                    Remove
+                </label>
+                &nbsp;&nbsp;
+                <input id="imageUpload" type='file' accept="image/*" (change)="changeListener($event)" style="display: none" />
+                <label for="imageUpload" class="btn btn-info bt-sm" id="changeBtn">
+                    Change
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <h1>DATATATT</h1>
+<div *ngFor="let t of vets">
+    <span>{{vets.Name}}</span>
+</div> -->

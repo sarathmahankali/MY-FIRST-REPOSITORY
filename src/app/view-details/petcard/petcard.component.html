@@ -1,0 +1,32 @@
+<div style="margin-top:5%">
+    <mat-card class="patientCard">
+      <mat-card-header>
+        <img class="example-header-image" mat-card-avatar [src]=" picturePlaceholder ">
+        <mat-card-title id="t1">Patient</mat-card-title>
+        <mat-card-subtitle id="t2"><span *ngIf="petdata">{{petdata.Name}}</span></mat-card-subtitle>
+        <mat-card-subtitle id="t3"><span *ngIf="petdata">{{petdata.Gender}}, Age:{{petdata.Age}}</span></mat-card-subtitle>
+      </mat-card-header>
+      <div>
+        <div class="my-call-mail">
+          <mat-card-content>
+            <span class="material-icons">call</span>
+            <span *ngIf="petdata">{{petdata.PhoneNumber}}</span>
+            <br>
+            <span class="material-icons">email</span>
+            <span *ngIf="petdata">{{petdata.Mail}}</span>
+          </mat-card-content>
+        </div>
+        <div class="my-dob-blood">
+          <hr style="width: 1px; height: 70px" id="vertical-rule" />
+          <mat-card-content>
+            <span class="material-icons">event</span>
+            <span *ngIf="petdata">{{petdata.DOB | date: "MM/dd/yyyy"}}</span>
+            <br>
+            <span class="material-icons">bloodtype</span>
+            <span *ngIf="petdata">{{petdata.BloodGroup}}</span>
+          </mat-card-content>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  

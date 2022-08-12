@@ -1,0 +1,49 @@
+/* app-nav-bar{
+    position: absolute;
+} */
+.dashboardcard {
+    margin-top: 10px;
+    /* margin-left: 13%; */
+    border-radius: 15px;
+    /* padding-right: 20%; */
+    background-color: #d3d3d3;
+    /* width:auto; */
+    height: auto;
+    padding:1rem;
+    /* overflow: hidden; */
+}
+.cardbg{
+    display:flex; padding-top: 5%; padding-bottom: 5%;
+}
+.a {
+    /* background-color: aqua; */
+    float: left;
+    position:fixed;
+    height: 100%;
+    columns:auto;
+    width: fit-content;
+}
+
+.b {
+    /* background-color: blueviolet; */
+    /* margin-left:var(--a,width); */
+    /* height: fit-content; */
+    padding-left: 70px;
+    float:none;
+    overflow:visible;
+}
+
+button{
+    margin-right:77px ;
+    background-color:rgb(5, 5, 67);
+    color: white;
+    border-radius: 7px;
+    padding: 8px;
+    float: right;
+}
+/* #secondgrid{
+    margin-top: 145px;
+} */
+/* mat-grid-list{
+    display: inline;
+} */

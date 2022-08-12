@@ -1,0 +1,58 @@
+<!-- <div class = "app-section"> -->
+    <div class="card">
+        <div class="card-body add-tests-section">
+          <div class="header">
+            <h3 class="card-title title">Tests</h3>
+          </div>
+      
+          <div class="tests-container">
+            <h4 class="card-subtitle subtitle">Selected</h4>
+            <!-- <p id="testsPlaceholder" *ngIf="tests.length<=0">No Tests Added Yet</p>
+                   -->
+            <span
+              class="tests"
+              *ngFor="let test of RecommendedTests; let i = index"
+              id="test{{ test[i] }}"
+              >{{ test.Name
+              }}<span
+                class="clickable"
+                (click)="removeTest(test)"
+                id="removeTestBtn{{ test[i] }}"
+                >X</span
+              ></span
+            >
+          </div>
+          <div
+            *ngIf="RecommendedTests.length <= 0"
+            style="margin: 10px 0; color: grey"
+          >
+            No test is added
+          </div>
+          <div class="mb-3 add">
+            <label for="exampleInputEmail1" class="form-label">Search</label>
+            <input
+              matInput
+              [matAutocomplete]="auto"
+              (keydown.enter)="onselect($event)"
+              [(ngModel)]="term"
+              name="term"
+              class="form-control"
+              style="border: 20%"
+            />
+            <mat-autocomplete #auto="matAutocomplete">
+              <span *ngIf="showMat()">
+                <mat-option
+                  *ngFor="let r of testNames"
+             
+
+                  [value]="r.Name"
+                >
+                  {{ r.Name }}
+                </mat-option>
+              </span>
+            </mat-autocomplete>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+      

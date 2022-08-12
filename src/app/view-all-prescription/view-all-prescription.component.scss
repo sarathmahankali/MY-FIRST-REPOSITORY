@@ -1,0 +1,116 @@
+.bi {
+    color: rgb(25, 130, 235);
+    margin-left: 120px;
+}
+
+svg {
+    display: inline;
+}
+
+.prescription {
+    color: #003C5F;
+}
+
+.outerbody {
+    font-family: sans-serif;
+    color: #18385c;
+    border-radius: 10px;
+    height: 20rem;
+    padding: 2rem;
+    padding-bottom: 1rem;
+    background-color: white;
+    width: 250%;
+    border: 0.1px solid lightgray;
+    float: left;
+    margin-top: 2px;
+    /* position: absolute; */
+    left:60px;
+}
+
+.headingName {
+    color: rgb(25, 130, 235);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #18385c;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 1px 1px 3px darkslategray;
+    border-radius: 15px;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+}
+
+.font_12 {
+    font-size: 12px;
+}
+
+.font_10_opacity {
+    padding-left: 1rem;
+    font-size: 11px;
+    opacity: 0.5;
+}
+
+.alignIcons {
+    text-align: right;
+    margin-top: -1rem;
+}
+
+.tabletsDose {
+    font-size: 10px;
+    background-color: #008080;
+    color: white;
+    border-radius: 5px;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    width: fit-content;
+}
+
+.add-button {
+    background-color: #008080;
+    color: white;
+    width: 100%;
+    border-radius: 12px;
+}
+
+mat-slide-toggle .toggle {
+    margin-left: 2em;
+    display: block;
+    background-color: aqua;
+    border: none
+}
+
+mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: aqua !important;
+}
+
+.toggleLabel {
+    font-family: inherit;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #18385c;
+    font-size: 10px;
+}
+
+.deleteBtn {
+    padding: 5px;
+}
+
+.editBtn {
+    padding: 5px;
+}

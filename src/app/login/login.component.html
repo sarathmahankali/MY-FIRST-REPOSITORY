@@ -1,0 +1,50 @@
+<div class="container">
+    <nav class="navbar navbar-dark bg-dark">
+        <div style="color: azure; ">
+           <button routerLink="../signup">SignUp</button> 
+        </div>
+    </nav>
+    <div>
+        <div class="wrap d-md-flex">
+            <div class="signup-photo">
+                <img src="https://media.istockphoto.com/photos/dog-and-cat-together-picture-id1304796251?b=1&k=20&m=1304796251&s=170667a&w=0&h=QhQ_YGtLE1h88yPjDK1JoxelTlrIKNEicr3OSSYZVzU=" 
+                alt="IMG" width="80%">
+            </div>
+            <div class="form" style="width: 30%;margin-left: 300px;">
+                <div class="text">
+                    <h1 style="text-align: center;">Welcome To Petzey, You are logging as {{userType}}</h1>
+                </div>
+                <div class="line">
+                    <div *ngIf="isLoginError" class="red-text center error-message alert alert-danger">
+                        <i class="material-icons">error</i> Incorrect username or password
+                    </div>
+                    <form #loginForm="ngForm" (ngSubmit)="login()">
+                        <div>
+                            <input type="email" class="form-control" name="username" placeholder="Username" ngModel
+                                #Name="ngModel" [(ngModel)]="user.Name" required>
+                            <div [hidden]="Name.valid || Name.pristine" class="alert alert-danger">
+                                Username is required!
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="password" class="form-control" name="password" placeholder="Password" ngModel
+                                #password="ngModel" [(ngModel)]="user.Password" required>
+                            <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+                                Password is required!
+                            </div>
+                        </div>
+                        <br>
+                        <button [disabled]="!loginForm.form.valid" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+                <div class="box">
+                    <div class="userType">
+                        <div (click)="setUserType('Doctor')">Login as doctor</div>
+                        <div (click)="setUserType('Patient')">Login as patient</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

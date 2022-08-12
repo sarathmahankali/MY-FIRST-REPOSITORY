@@ -1,0 +1,121 @@
+<div class="merge">
+    <form [formGroup]="vetform" class="form-container">
+        <mat-card class="MatCArd" style="width: 40rem">
+            <mat-card-header>
+                <mat-card-title>Profile Information</mat-card-title>
+            </mat-card-header>
+
+            <br />
+            <div class="split1 left">
+                <div class="centered">
+                    <div class="col-md-4 col-12" style="margin-top: 2em">
+                        <div class="col-md-12 col-6 buttons">
+                            <br />
+                            <label type="button"
+                                   class="btn bt-sm"
+                                   id="userDeleteIcon">
+                                Remove
+                            </label>
+                            &nbsp;&nbsp;
+                            <input id="imageUpload"
+                                   type="file"
+                                   accept="image/*"
+                                   (change)="changeListener($event)"
+                                   style="display: none" />
+                            <label for="imageUpload"
+                                   class="btn btn-info bt-sm"
+                                   id="changeBtn">
+                                Change
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <mat-card-content>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="full-width" for="Name">
+                                <!-- <input formControlName="Name" matInput placeholder="Name" [disabled]="!editable" /> {{vet.Name}} -->
+                                <input formControlName="vet_name"
+                                       matInput
+                                       placeholder="Name"
+                                       [disabled]="!editable" />
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <mat-form-field class="full-width">
+                                <!-- <input  formControlName="Email" matInput placeholder="Email" [disabled]="!editable" />{{vet.Email}} -->
+                                <input formControlName="vet_email_id"
+                                       matInput
+                                       placeholder="Email"
+                                       [disabled]="!editable" />
+                            </mat-form-field>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+
+                            <mat-form-field class="full-width">
+                                <!-- <input  formControlName="PhoneNo" matInput placeholder="Phone No" [disabled]="!editable" />{{vet.PhoneNo}} -->
+                                <input formControlName="vet_phone_number"
+                                       matInput
+                                       placeholder="Phone No"
+                                       [disabled]="!editable"
+                                       type="text" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="full-width">
+                                <!-- <input  formControlName="Speciality" matInput placeholder="Speciality" [disabled]="!editable">{{vet.Speciality}} -->
+                                <input formControlName="vet_speciality"
+                                       matInput
+                                       placeholder="Speciality"
+                                       [disabled]="!editable" />
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <mat-form-field class="full-width">
+                                <!-- <input  formControlName="NPIno" matInput placeholder="NPIno" [disabled]="!editable"/>{{vet.NPIno}} -->
+                                <input formControlName="vet_npi_no"
+                                       matInput
+                                       placeholder="NPIno"
+                                       [disabled]="!editable" />
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col-md-6">
+                            <mat-form-field class="full-width">
+                                <!-- <input  formControlName="PractiseLocation" matInput placeholder="PractiseLocation" [disabled]="!editable" >{{vet.PractiseLocation}} -->
+                                <input formControlName="vet_practice_location"
+                                       matInput
+                                       placeholder="PracticeLocation"
+                                       [disabled]="!editable" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </div>
+            <mat-card-actions>
+                &nbsp;&nbsp;
+                <button type="button"
+                        class="btn btn-primary"
+                        (click)="OnClick1()"
+                        [style]="{ display: editable ? 'none' : 'initial' }">
+                    Edit
+                </button>
+                &nbsp;&nbsp;
+                <button type="submit"
+                        class="btn"
+                        (click)="OnClick2()"
+                        [style]="{ display: !editable ? 'none' : 'initial' }">
+                    Save
+                </button>
+
+                <!-- <button (click)="saveForm()" mat-raised-button color="primary">Save</button> -->
+            </mat-card-actions>
+        </mat-card>
+    </form>
+</div>

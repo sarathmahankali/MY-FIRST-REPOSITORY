@@ -1,0 +1,144 @@
+<div class="card outerbody">
+    <div class="row">
+        <div class="col-11">
+            <div class="headingName">
+                <h4 class="prescription"><b>Prescriptions</b></h4>
+            </div>
+        </div>
+        <div class="col-1">
+            <button type="button" id="addBtn" class="btn btn-primary" (click)="openDialog()">
+        + 
+      </button>
+        </div>
+    </div>
+
+    <div class="parentdiv">
+        <div [ngClass]="'p.id'" class="card cards" *ngFor="let p of medicinePrescription">
+            <div class="row">
+                <div class="col-8">
+                    <div class="font_13">{{ p.Medicine }}</div>
+                    <div class="font_10_opacity">{{ p.AdditionalComment }}</div>
+                </div>
+                <div class="col-4">
+                    <div class="alignIcons">
+                        <button type="button" class="btn editBtn" id="editBtn" (click)="openDialog2(p)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="green"
+                class="bi bi-pencil"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
+                />
+              </svg>
+            </button>
+                        <button type="button" class="btn deleteBtn" id="deleteBtn" (click)="deletePrescription(p.Id)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="red"
+                class="bi bi-x-lg"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"
+                />
+              </svg>
+            </button>
+                    </div>
+                    <div class="tabletsDose">After Food</div>
+                    <!-- <div class="tabletsDose">Before Food</div> -->
+                    <svg id="_1-0-1" data-name="1-0-1" xmlns="http://www.w3.org/2000/svg" width="73.301" height="6.826" viewBox="0 0 73.301 6.826">
+            <line
+              id="Line_62"
+              data-name="Line 62"
+              x2="67.992"
+              transform="translate(1.896 3.413)"
+              fill="none"
+              stroke="#707070"
+              stroke-width="1"
+            />
+            <circle
+              id="Ellipse_44"
+              data-name="Ellipse 44"
+              cx="3.413"
+              cy="3.413"
+              r="3.413"
+              fill="#0090ff"
+            />
+            <g
+              id="Ellipse_45"
+              data-name="Ellipse 45"
+              transform="translate(32.614)"
+              fill="#fff"
+              stroke="#707070"
+              stroke-width="1"
+            >
+              <circle cx="3.413" cy="3.413" r="3.413" stroke="none" />
+              <circle cx="3.413" cy="3.413" r="2.913" fill="none" />
+            </g>
+            <circle
+              id="Ellipse_46"
+              data-name="Ellipse 46"
+              cx="3.413"
+              cy="3.413"
+              r="3.413"
+              transform="translate(66.475)"
+              fill="#0090ff"
+            />
+          </svg>
+          
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="row">
+    <div class="col-11">
+        <div class="heading">
+            <h4>Prescriptions</h4>
+        </div>
+    </div>    
+    <div class="col-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
+        </svg>  
+    </div>      
+</div> -->
+
+<!-- <div class="xyz">
+
+    <mat-card>
+        <h2>Prescriptions
+            <button mat-button (click)=" openDialog() " class="btncss "><img src="../assets/images/plus.PNG " height="25 " width="25 " class="styler " /></button>
+        </h2>
+        <mat-card *ngFor="let p of pre " class="mat "> {{p.Medicine}} //
+            <button mat-button (click)="openDialog2() " class="btncss "><img src="../assets/images/edit.png " height="25 " width="25 " class="styler " /></button> 
+<button mat-icon-button color="primary" (click)="openDialog2()">
+                <mat-icon>edit</mat-icon>
+            </button>
+<div class="row ">
+    <div class="col-auto ">
+        {{p.description}}
+    </div>
+    <div class="col-auto ">
+        <p>Before
+            <mat-slider aria-label="unit(s)">After</mat-slider>
+        </p>
+    </div>
+</div>
+</mat-card>
+
+</mat-card>
+
+</div> -->

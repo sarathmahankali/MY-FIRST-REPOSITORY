@@ -1,0 +1,45 @@
+.example-header-image {
+    /* background-image: url(https://www.fairtravel4u.org/wp-content/uploads/2018/06/sample-profile-pic.png); */
+    background-size:cover;
+    width: 80px;
+    height: 80px;
+}
+.patientCard{
+    margin-left: 5%;
+    width:40vmax;
+    height:15vmax;
+    float: left;
+    border-radius: 15px;
+    padding: 20px;
+    /* box-sizing: content-box; */
+    /* border: 2px solid red; */
+    box-shadow: 1px 1px 3px darkslategray;
+}
+.my-call-mail{
+    width: 50%;
+    line-height: 40px;
+    float: left;
+}
+#vertical-rule{
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.my-dob-blood{
+    line-height: 40px;
+    float: none;
+}
+/* #t1,#t3,#t4{
+    line-height: 15px;
+     font-weight: 100;
+} */
+#t2{
+    font-weight: bolder;
+    font-size: larger;
+    color:darkblue;
+}
+.material-icons{
+    float:left;
+    margin-top: 8px;
+    padding-right: 2px;
+}

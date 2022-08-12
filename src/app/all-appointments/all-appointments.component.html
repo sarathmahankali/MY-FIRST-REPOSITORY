@@ -1,0 +1,78 @@
+<hr style="margin-bottom: 0" />
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <div class="navbar-brand">
+        <b>All Appointments</b>
+      </div>
+      <div class="d-flex">
+        <div class="row">
+          <div class="col-auto align-self-center" *ngIf="showGrid">
+            <form>
+              <div class="row g-2 align-items-center">
+                <div class="col-auto">
+                  <label for="filterAppointment" class="col-form-label"
+                    >Filter:</label
+                  >
+                </div>
+                <div class="col-auto">
+                  <select
+                    name="filterAppointment"
+                    class="form-select form-select-sm"
+                    (change)="SelectChange($event)"
+                  >
+                    <option value="All" selected>All</option>
+                    <option value="CANCELLED">Cancelled</option>
+                    <option value="CLOSED">Closed</option>
+                    <option value="CONFIRMED">Confirmed</option>
+                    <option value="OPEN">Open</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-auto align-self-center">
+            <a class="btn btn-sm select" routerLink="new" id="add-appointment" (click)="NewAppointment()"
+              ><i class="bi bi-plus-lg"></i> New Appointment</a
+            >
+          </div>
+          <div class="col-auto align-self-center icon-container icon">
+            <div
+              class="microsoft-icon"
+              [class]="showGrid ? 'select' : 'unSelect'"
+              id="microsoft-icon"
+            >
+              <button class="btn btn-sm" (click)="toggleViewGrid()">
+                <i
+                  class="bi bi-microsoft"
+                  [class]="showGrid ? 'select-btn' : 'unSelect-btn'"
+                ></i>
+              </button>
+            </div>
+            <div
+              class="calender-icon"
+              [class]="showGrid ? 'unSelect' : 'select'"
+              id="calender-icon"
+            >
+              <button class="btn btn-sm" (click)="toggleViewCalender()">
+                <i
+                  class="bi bi-calendar-week"
+                  [class]="showGrid ? 'unSelect-btn' : 'select-btn'"
+                ></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+<hr id="hr-bottom" />
+<app-appointmentgridview
+  [status]="currentStatus"
+  [ngStyle]="{ display: showGrid ? 'initial' : 'none' }"
+>
+</app-appointmentgridview>
+<app-add-appointments
+  [ngStyle]="{ display: !showGrid ? 'initial' : 'none' }"
+></app-add-appointments>

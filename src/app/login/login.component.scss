@@ -1,0 +1,59 @@
+
+.form {
+    /* margin: 15% auto; */
+    align-items: center;
+    line-height: 300%;
+    margin-left: 395px;
+}
+
+a {
+    font-size: 25px;
+}
+
+.signup-photo{
+    width: 396px;
+    height: 514px;
+}
+
+.navbar {
+    font-size: 20px;
+    padding: 1% 1% 1px 93%;
+}
+
+.line {
+    line-height: 20px;
+    padding-top: 20%;
+
+}
+
+.box {
+    padding-inline-start: 65%;
+    padding-top: 30%;
+}
+
+.userType {
+    line-height: 200%;
+    font-size: larger;
+}
+
+.userType:hover,
+.navbar div p:hover {
+    cursor: pointer;
+}
+
+.text {
+    padding-top: 10%;
+}
+
+.btn {
+    margin: auto 40%;
+    box-sizing: border-box;
+    border-radius: 20%;
+}
+
+input {
+    text-align: center;
+    box-sizing: border-box;
+    border-width: 0px 0px 5px 0px;
+    padding-bottom: 20px;
+}

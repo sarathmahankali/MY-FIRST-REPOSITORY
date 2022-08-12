@@ -1,0 +1,61 @@
+
+.card{
+    font-family: sans-serif;
+    color: #18385c;
+    box-shadow: 1px 1px 3px darkslategray;
+    border-radius: 15px;
+    padding: 2rem;
+    background-color: white;
+    width: 115%;
+    height: 300px;
+    /* height: 45%; */
+    border: 0.1px solid lightgray;
+    /* padding-bottom: 3rem; */
+    /* margin-left: 45px; */
+    left: 50px;
+    float:none;
+  }
+  .headingName{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .btn{
+    margin-left: 3rem;
+  }
+  .font_12{
+    font-size: 12px;
+    /* margin-top: 1rem; */
+    text-align: center;
+  }
+  .margin{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes heartbeat {
+    0% {
+      transform: scale( 1 );    
+    }
+    50% {
+      transform: scale( 1.25 ) 
+    }
+    
+  }
+  .bi-heart
+  {
+    animation: heartbeat 1s infinite; 
+  }
+  
+  .resp
+  {
+    animation: heartbeat 1s infinite;
+  }
+
+  .bi-thermometer-high{
+    animation: heartbeat 1s infinite;
+  }
+  
+  .diabetes{
+    animation: heartbeat 1s infinite;
+  }
+  

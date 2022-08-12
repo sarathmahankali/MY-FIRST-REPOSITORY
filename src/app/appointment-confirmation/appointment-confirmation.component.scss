@@ -1,0 +1,58 @@
+.container {
+    font-family: "Akshar", sans-serif;
+  }
+  #header {
+    font-weight: bold;
+    font-size: 25px;
+  }
+  img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+  }
+  div.wrapper {
+    position: relative;
+    border: 1px solid rgb(1, 82, 231);
+    margin-top: 20px;
+    padding: 20px 10px 10px;
+    border-radius: 10px 0 10px 0;
+  }
+  div.wrapper label {
+    color: white;
+    line-height: 18px;
+    padding: 0 5px;
+    position: absolute;
+    border-radius: 10px 0 10px 0;
+    background-color: cornflowerblue;
+    top: -1px;
+    left: -1px;
+  }
+  #nameTag {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  #specialityTag {
+    font-size: 20px;
+    font-style: italic;
+    color: rgb(213, 213, 213);
+  }
+  hr {
+    padding-bottom: 0px;
+  }
+  h3 {
+    font-size: 30px;
+    color: rgb(185, 185, 185);
+  }
+  h4 {
+    font-size: 20px;
+    padding: 0;
+  }
+  .actor-info {
+    padding-top: 10px;
+  }
+  .appointment-time {
+    font-size: large;
+    font-weight: bold;
+    color: deeppink;
+  }
+  

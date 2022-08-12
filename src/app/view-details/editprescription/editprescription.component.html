@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Prescription Details</h1>
+<div mat-dialog-content>
+    <form [formGroup]="addMedicineForm">
+        <div>
+            <!-- <input type="text" class="form-control" name="SearchMedicine" /><br> -->
+            <input class="form-control" formControlName="Medicine" matInput/><br>
+        </div>
+        <div>
+            <!-- <input type="text" class="form-control" name="MedicineDuration" /><br> -->
+            <input class="form-control" formControlName="Span" matInput /><br>
+        </div>
+        <div class=" row ">
+            <div class="col-auto ">
+                <!-- <input type="text " class="form-control " name="MedicineCycle" /><br> -->
+                <input class="form-control" formControlName="TimeOfDay" matInput /><br>
+            </div>
+            <div class="col-auto ">
+                <p>Before</p>
+                <mat-slide-toggle [(ngModel)]="isChecked" formControlName="Intake"> After </mat-slide-toggle>
+            </div>
+        </div>
+        <div>
+            <!-- <br> <input type="text " class="form-control " name="MedicineDesc" /><br> -->
+            <input class="form-control" formControlName="AdditionalComment" matInput/><br>
+        </div>
+        <div mat-dialog-action [align]="'center'">
+            <button mat-raised-button color="primary" type="submit" (click)="OnClick2()">Update Prescription</button>
+
+        </div>
+    </form>
+</div>

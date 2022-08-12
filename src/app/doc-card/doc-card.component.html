@@ -1,0 +1,28 @@
+<div style="margin-top:5%">
+    <mat-card class="doctorCard">
+      <mat-card-header>
+          <img class="example-header-image" mat-card-avatar src="{{doctordata.DoctorPicture}}">
+        <mat-card-title>Doctor</mat-card-title>
+        <mat-card-subtitle id="t2"><span>{{doctordata.Name}}</span></mat-card-subtitle>
+        <mat-card-subtitle id="t3"><span>.{{doctordata.SpecialityName}}</span></mat-card-subtitle>
+      </mat-card-header>
+      <!-- <hr /> -->
+      <div class="my-call-mail">
+        <mat-card-content>
+          <span class="material-icons">call</span>
+          <span>{{doctordata.PhoneNumber}}</span>
+          <br>
+          <span class="material-icons">email</span>
+          <span>{{doctordata.Mail}}</span>
+        </mat-card-content>
+      </div>
+      <div class="my-npi-no-location">
+        <hr style="width: 1px; height: 70px" id="vertical-rule" />
+        <mat-card-content>
+          <span><sup>NPI No. </sup>{{doctordata.NPINumber}}</span><br>
+          <span><sup>Location </sup>{{doctordata.PracticeLocation}}</span>
+        </mat-card-content>
+      </div>
+    </mat-card>
+  </div>
+  

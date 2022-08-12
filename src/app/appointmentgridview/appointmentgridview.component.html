@@ -1,0 +1,149 @@
+<div class="container">
+    <mat-grid-list cols="4">
+      <mat-grid-tile *ngFor="let appointment of fetchedAppointments">
+        <mat-card class="patient-card">
+          <mat-card-header>
+            <div mat-card-avatar>
+              <img [src]="defaultPic" alt="Profile-Pic" />
+            </div>
+            <div class="info row">
+              <div>
+                <div class="name">
+                  <p>
+                    <b
+                      ><span>{{ appointment.PetName }}</span></b
+                    >
+                  </p>
+                </div>
+                <div
+                  class="i-container"
+                  *ngIf="appointment.AppointmentStatus == 'CONFIRMED'"
+                >
+                  <div class="i">
+                    <i
+                      class="bi bi-chat-right-text"
+                      style="font-size: 24px; color: rgb(1, 1, 144)"
+                    ></i>
+                  </div>
+                  <div class="vr-sm"></div>
+                  <div class="i">
+                    <i
+                      class="bi bi-telephone"
+                      style="font-size: 24px; color: rgb(1, 1, 144)"
+                    ></i>
+                  </div>
+                  <div class="vr-sm"></div>
+                  <div class="i">
+                    <i
+                      class="bi bi-camera-video"
+                      style="font-size: 24px; color: rgb(1, 1, 144)"
+                    ></i>
+                  </div>
+                </div>
+                <div
+                  class="i-container-2"
+                  *ngIf="appointment.AppointmentStatus == 'OPEN'"
+                >
+                  <div class="accept i">
+                    <a
+                      class="actionLink"
+                      (click)="acceptAppointment(appointment.AppointmentId)"
+                      ><i
+                        class="bi bi-check-circle"
+                        style="font-size: 35px; color: green"
+                      ></i
+                    ></a>
+                  </div>
+                  <div class="cancel i">
+                    <a
+                      class="actionLink"
+                      (click)="rejectAppointment(appointment.AppointmentId)"
+                      ><i
+                        class="bi bi-x-circle"
+                        style="font-size: 35px; color: red"
+                      ></i
+                    ></a>
+                  </div>
+                </div>
+                <div *ngIf="appointment.AppointmentStatus == 'CANCELLED'">
+                  <p style="color: red; padding: 0">
+                    {{ appointment.AppointmentStatus }}
+                  </p>
+                </div>
+                <div *ngIf="appointment.AppointmentStatus == 'CLOSED'">
+                  <p style="color: green; padding: 0">
+                    {{ appointment.AppointmentStatus }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </mat-card-header>
+          <hr />
+          <mat-card-content>
+            <div class="row">
+              <div class="col-auto time-container">
+                <div class="time">
+                  {{ formatTime(appointment.AppointmentTime) }}
+                </div>
+                <div class="date">
+                  {{ appointment.AppointmentDate | date: "dd/MM/yyyy" }}
+                </div>
+              </div>
+              <div class="vr col-auto"></div>
+              <div class="col-auto d-flex align-items-center">
+                <div class="symptom">
+                  {{ appointment.Issue }}
+                </div>
+              </div>
+            </div>
+          </mat-card-content>
+          <hr />
+          <mat-card-actions>
+            <div class="link-container">
+              <div>
+                <a class="card-link actionLink"  (click)="viewDetail(appointment)"> <small>View Details</small> </a>
+              </div>
+              <div>
+                <a
+                  class="card-link actionLink"
+                 (click)="openDialog(appointment.AppointmentId)"
+                  > <small>View FeedBack</small> </a
+                >
+              </div>
+            </div>
+          </mat-card-actions>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <!-- <div class="d-flex justify-content-between">
+      <div>
+        <button
+          class="btn btn-primary"
+          (click)="PrevPage()"
+          [disabled]="!hasPrev"
+        >
+          Previous
+        </button>
+      </div>
+      <div>
+        <button
+          class="btn btn-primary"
+          (click)="NextPage()"
+          [disabled]="!hasNext"
+        >
+          Next
+        </button>
+      </div>
+    </div> -->
+  </div>
+  
+  <!-- {
+      "AppointmentId": 0,
+      "AppointmentDate": "2022-05-01T16:29:09.770Z",
+      "AppointmentTime": "string",
+      "AppointmentStatus": "string",
+      "PatientName": "string",
+      "Issue": "string"
+       (click)="openDialog(appointment.AppointmentId)"
+    } -->
+  

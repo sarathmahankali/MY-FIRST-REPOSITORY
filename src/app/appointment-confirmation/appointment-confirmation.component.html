@@ -1,0 +1,91 @@
+<div class="container d-flex justify-content-center">
+    <div class="card border-secondary w-75" style="border-radius: 40px;">
+      <div class="card-header bg-white text-center" style="border-radius:40px 40px 0px 0px;">
+        <p id="header"> Appointment Confirmation </p>
+      </div>
+      <div class="card-body">
+        <div>
+          <div class="d-flex justify-content-evenly" style="padding: 0px 30px 0px">
+            <div style="width: 40%">
+              <h3>Patient</h3>
+              <div class="d-flex justify-content-evenly">
+                <div>
+                  <img
+                    src="https://i.pinimg.com/474x/38/1e/c0/381ec006034984c22f0db62451b10e67.jpg"
+                    alt="patient-img"
+                  />
+                </div>
+                <div class="actor-info">
+                  <p id="nameTag">{{confirmationData.PatientName}}</p>
+                </div>
+              </div>
+              <hr />
+            </div>
+            <div>
+              <div style="font-size: 120px; color: rgb(155, 230, 255);">
+                <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div style="width: 40%">
+              <h3>PCP</h3>
+              <div class="d-flex justify-content-evenly">
+                <div>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7-dxP0GAsryoD4TbeGIfJARNSQlFqDVrK--N-0Sd3dJsLuiNrKuEsQTOL-1q261BMt9g&usqp=CAU"
+                    alt="patient-img"
+                  />
+                </div>
+                <div class="actor-info">
+                  <p id="nameTag">{{confirmationData.DoctorName}}</p>
+                  <p id="specialityTag"> {{ confirmationData.DoctorSpeciality }} </p>
+                </div>
+              </div>
+              <hr />
+            </div>
+          </div>
+          <div class="d-flex justify-content-evenly" style="padding:0px 30px 0px; margin-top: 0px;">
+            <div style="width: 45%;">
+              <div class="wrapper shadow p-3">
+                <label>Type</label>
+                <div class="text-center">Appointment</div>
+              </div>
+              <div class="wrapper shadow p-3">
+                <label>Reason</label>
+                <div class="text-center" >{{confirmationData.Reason}}</div>
+                <div class="text-center"> <span *ngIf="confirmationData.Reason == ''">Reason not added</span> </div>
+              </div>
+              <div class="wrapper shadow p-3">
+                <label> Previous Prescription</label>
+                <div class="text-center"><a href="">Click here to open</a></div>
+              </div>
+            </div>
+            <div
+              class="v"
+              style="border-left: 1px solid rgb(0, 0, 0); height: 230px; padding: 0"
+            ></div>
+            <div style="width: 45%;">
+              <div class="wrapper shadow p-3">
+                <label>Time</label>
+                <div class="text-center appointment-time"> Time: {{formatTime(confirmationData.AppointmentTime)}} | Date: {{ confirmationData.AppointmentDate  }}</div>
+              </div>
+              <div class="wrapper shadow p-3">
+                <label>Status</label>
+                <div class="text-center">{{confirmationData.Status}}</div>
+              </div>
+              <div class="wrapper shadow p-3">
+                <label>Issue</label>
+                <div class="text-center">{{confirmationData.IssueName}}</div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center" style="padding: 40px;">
+              <a href="app-dashboard" class="btn btn-dark btn-lg rounded-pill" >
+                  Go Back To Appointment
+              </a>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  

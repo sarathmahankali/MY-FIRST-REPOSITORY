@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="fa fa-arrow-left" style="font-size: 22px"></span>
+      <span *ngIf="router.url === '/app-dashboard'; else EmptySpace">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <a class="navbar-brand">Appointments</a>
+            <li class="nav-item">
+              <a class="nav-link active" *ngIf="vet">
+                <i class="fa-solid fa-location-dot"></i>
+                {{vet.vet_practice_location}}
+                <i class="fa-solid fa-angle-down"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">
+                <i class="fa-regular fa-circle-dot" id="icon1"></i>
+                New Appointment
+              </a>
+            </li>
+          </ul>
+        </div>
+      </span>
+  
+      <ng-template #EmptySpace>
+        <span *ngIf="router.url === '/app-settings-tab'" class="nav-heading">Settings</span>
+        <span *ngIf="router.url === '/app-patients-tab'" class="nav-heading">Patients</span>
+        <span *ngIf="router.url === '/app-chatrooms-tab'" class="nav-heading">Messages</span>
+      </ng-template>
+  
+      <!-- dropdown  -->
+      <div class="d-flex">
+        <div class="dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            *ngIf="vet"
+          >
+            {{ vet.vet_name }}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Status : Online</a></li>
+            <hr />
+            <li>
+              <a class="dropdown-item" href="app-settings-tab">Account Setting</a>
+            </li>
+            <hr />
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <hr />
+            <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+          </ul>
+        </div>
+        <span *ngIf="vet">
+          <img
+           [src]="vet.vet_profile_image"
+            alt="Avatar"
+          />
+        </span>
+      </div>
+    </div>
+  </nav>
+  

@@ -1,0 +1,41 @@
+<div class="">
+    <div class="a">
+      <app-side-navbar></app-side-navbar>
+    </div>
+    <div class="b">
+      <app-navbar></app-navbar>
+      <div class="dashboardcard">
+        <!-- <div fxLayout="row" fxLayoutAlign="start center">
+        <app-patient-card fxFlex="50%"></app-patient-card>
+        <app-doc-card fxFlex="50%"></app-doc-card>
+      </div> -->
+      <button mat-button (click)="openDialog()" class="btn">Close Appointment</button>
+      <div>
+  
+        <mat-grid-list cols="2">
+          <mat-grid-title><app-patientcard [appointmentId]="appointmentId"></app-patientcard></mat-grid-title>
+          <mat-grid-title><app-doctorcard [appointmentId]="appointmentId"></app-doctorcard></mat-grid-title>
+        </mat-grid-list>
+        
+      </div>
+        <div>
+          <app-commentcard [appointmentId]="appointmentId"></app-commentcard>
+        </div>
+        <div class="container-fluid d-flex justify-content-around">
+          <div style="width: 40%;">
+            <app-vitalcard [appointmentId]="appointmentId"></app-vitalcard>
+          </div>
+        </div>
+        <!-- <mat-grid-list style="display:flex;
+        ">
+          <mat-grid-title ><app-recommendationcard></app-recommendationcard></mat-grid-title>
+          <mat-grid-title ><app-vitalcard></app-vitalcard></mat-grid-title>
+      </mat-grid-list> -->
+        <mat-grid-list class="cardbg" cols="2">
+          <mat-grid-title><app-prescriptioncard [appointmentId]="appointmentId"></app-prescriptioncard></mat-grid-title>
+          <mat-grid-title><app-testcard [appointmentId]="appointmentId"></app-testcard></mat-grid-title>
+        </mat-grid-list>
+      </div>
+    </div>
+  </div>
+  

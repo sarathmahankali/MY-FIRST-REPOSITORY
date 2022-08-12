@@ -1,0 +1,31 @@
+.side-navbar {
+    /* width:12%; */
+    /* display: block;  */
+    /* position: absolute; */
+    height: 750px;
+    background-color: rgb(5, 5, 67);
+    /* color:white; */
+    padding-left: 15px;
+    position:fixed;
+
+}
+
+.nav-link {
+    color: white;
+    display: inline-flex;
+}
+
+#icon {
+    /* align-self: right; */
+    /* width: full; */
+    float: left;
+    padding-right: 15px;
+}
+
+#icon-1 {
+    /* align-self: right; */
+    /* width: full; */
+
+    float: left;
+    padding-left: 15px;
+}

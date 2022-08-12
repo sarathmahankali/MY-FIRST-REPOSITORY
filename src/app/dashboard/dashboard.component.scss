@@ -1,0 +1,30 @@
+#dashboardcard {
+    margin-top: 10px;
+    /* margin-left: 13%; */
+    border-radius: 15px;
+    /* padding-right: 20%; */
+    background-color: #fdfdfd;
+    /* width:auto; */
+    height: 100%;
+    padding:1rem;
+    /* overflow: hidden; */
+}
+
+.a {
+    /* background-color: aqua; */
+    float: left;
+    height: 100%;
+    columns:auto;
+    width: fit-content;
+}
+
+.b {
+    /* background-color: blueviolet; */
+    /* margin-left:var(--a,width); */
+    /* height: fit-content; */  
+    /* position: fixed; */
+    top: 0; 
+    padding-left: 190px;
+    float:none;
+    overflow:visible;
+}

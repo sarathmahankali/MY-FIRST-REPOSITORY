@@ -1,0 +1,48 @@
+<h1 mat-dialog-title>Prescription Details</h1>
+<hr>
+<div mat-dialog-content>
+    <form [formGroup]="addMedicineForm" (ngSubmit)="onSubmit()">
+        <div>
+            <!-- <input type="text" formControlName="MedicineName" class=" form-control" placeholder="Search For Medicine " /><br> -->
+            <mat-form-field appearance="fill" class="formfield">
+                <mat-label>Medicine Name</mat-label>
+                <input matInput formControlName="Medicine" [matAutocomplete]="auto">
+
+
+                <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayMed">
+                    <mat-option *ngFor="let option of allMedicine | medicineFilter:addMedicineForm.get('Medicine').value" [value]="option">
+                        {{option.Name}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill" class="formfield">
+                <mat-label>Medicine Duration</mat-label>
+                <input type="text " formControlName="Span" matInput/><br>
+            </mat-form-field>
+        </div>
+        <div class="row ">
+            <div class="col-auto ">
+                <mat-form-field appearance="fill">
+                    <mat-label>Medicine Cycle</mat-label>
+                    <input type="text" formControlName="TimeOfDay" matInput/><br>
+                </mat-form-field>
+            </div>
+            <div class="col-auto ">
+                <p>Before</p>&nbsp;&nbsp;&nbsp;
+                <mat-slide-toggle formControlName="Intake" (click)="setValue()"> After </mat-slide-toggle>
+            </div>
+        </div>
+        <div>
+            <mat-form-field appearance="fill" class="formfield">
+                <mat-label>Medicine Description to Patient</mat-label>
+                <input type=" text " formControlName="AdditionalComment" matInput />
+            </mat-form-field>
+        </div>
+        <div mat-dialog-action [align]="'center'">
+            <button mat-raised-button color="primary" (click)="OnClick1()">Add Medicine</button>
+        </div>
+
+    </form>
+</div>
